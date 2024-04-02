@@ -1,0 +1,52 @@
+body {
+    font-family: poppins;
+}
+
+i {
+    background-color: black;
+}
+
+.conversation {
+    color: green
+}
+
+.playerChoice {
+    color: rgb(97, 97, 201);
+    font-style: italic;
+}
+
+#controls {
+    text-align: center;
+    width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.377) 2.4px 2.4px 3.2px;
+    background-color: rgba(0, 0, 0, 0.466);
+}
+
+#act {
+    display: flex;
+}
+
+#aventure {
+    padding: 20px;
+}
+
+.map{
+    max-width: 500px;
+    height: auto;
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #000;
+}
+
+#badgeDeTest {
+    background-color: #00000075;
+    padding: 5px;
+    display: flex;
+    border-radius: 100px;
+    width: fit-content;
+}

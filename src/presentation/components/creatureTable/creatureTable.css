@@ -1,0 +1,42 @@
+fieldset {
+    background-image: url("src/assets/commons/parchmentTexture.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+
+h4 {
+ margin: 10px 0 0 0
+}
+
+fieldset > ol > li {
+    list-style: none;
+}
+
+.desc {
+    margin-top: 0;
+    font-style: italic;
+    font-size: small;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+}
+
+.imageAndStats {
+    display: flex;
+}
+
+table, th, td {
+    border: 2px solid;
+    border-color: burlywood;
+    padding: 5px 5px 5px 5px
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 5px 20px 5px;
+}
