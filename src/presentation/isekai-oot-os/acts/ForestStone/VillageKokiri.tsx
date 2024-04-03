@@ -83,7 +83,7 @@ export function VillageKokiri () {
             </Alert><br/>
 
             <Alert variant="standard" severity="info">
-                si mentionne la mort de links
+                si mentionne la mort de link
                 <p className="conversation">
                     *se rapproche et chuchotte* merci. A part Saria personne ne l'apprecie ici.
                     Il a même voulu voler notre relique sous pretexte qu'un grand mal menace nos contrées...

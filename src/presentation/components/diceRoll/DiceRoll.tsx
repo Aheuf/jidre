@@ -5,7 +5,7 @@ export function DiceRoll () {
     const [dice,setDice] = useState<number>(0)
     const [quantite, setQuantite] = useState<number>(0)
     const [results, setResults] = useState<number[]>([])
-
+    
     const inputStyle = {
         "border":"solid white",
         "color":"white",
@@ -13,22 +13,22 @@ export function DiceRoll () {
         "widht":"30px",
         "margin-left":"5px"
     }
-
+    
     const style = {
         "display": "flex",
         "flex-direction":"row"
     }
-
+    
     const handleClick = () => {
-        if(results.length > 0){
-            setResults([])
-        }
         const diceSound = new Audio("src/assets/commons/soundEffect/RollingDice.mp3");
+        const LaunchResult:number[] = []
+
         if(quantite > 0 && dice > 0){
             diceSound.play()
             for(let i = 0; i < quantite; i++ ){
-                setResults([...results, Math.floor(Math.random() * (dice - 1) + 1)])
+                LaunchResult.push(Math.floor(Math.random() * (dice - 1) + 1))
             }
+            setResults(LaunchResult)
         }
     }
 

@@ -15,18 +15,22 @@ i {
     font-style: italic;
 }
 
+#act {
+    
+}
+
 #controls {
+    overflow-y: scroll;
+    position:fixed;
+    height: 100%;
     text-align: center;
     width: fit-content;
     box-shadow: rgba(0, 0, 0, 0.377) 2.4px 2.4px 3.2px;
     background-color: rgba(0, 0, 0, 0.466);
 }
 
-#act {
-    display: flex;
-}
-
 #aventure {
+    margin-left: 400px;
     padding: 20px;
 }
 
