@@ -1,0 +1,17 @@
+.redirectbutton {
+  width: 100%;
+  height: 60px;
+  border-radius: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid;
+  border-width: thin;
+}
+
+.icon {
+  height: 100%;
+  border-left: solid;
+  align-content: center;
+  border-width: thin;
+}

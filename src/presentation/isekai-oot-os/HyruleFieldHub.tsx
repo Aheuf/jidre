@@ -7,6 +7,7 @@ import { Alert, Button, ButtonGroup, Modal } from '@mui/material';
 import { useState } from 'react';
 import { BadgeDeTest } from '../components/testBadge/BadgeDeTest';
 import { DiceRoll } from '../components/diceRoll/DiceRoll';
+import { RedirectButton } from '../components/RedirectButton';
 
 export function HyruleField () {
   const navigate = useNavigate();
@@ -15,6 +16,9 @@ export function HyruleField () {
     <div id="act">
       <div id="controls">
         <h3>redirection</h3>
+        <RedirectButton link={`../${OOT_ROUTES.intro}`} name="village kokiri"/>
+        {/* <RedirectButton link={`../${OOT_ROUTES.intro}`} name="village cocorico"/>
+        <RedirectButton link={`../${OOT_ROUTES.intro}`} name="domaine zora"/> */}
         <ButtonGroup variant="text" aria-label="Basic button group" orientation="vertical">
           <Button onClick={() => navigate(`../${OOT_ROUTES.intro}`)}>retour au village kokiri</Button>
           <Button onClick={() => navigate(OOT_ROUTES.cocorico)}>village cocorico</Button>
