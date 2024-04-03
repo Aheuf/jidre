@@ -4,7 +4,7 @@ import { OOT_ROUTES } from "../../routes";
 import { CreatureTable } from "../../../components/creatureTable/creatureTable";
 import { Cockatrice } from "../../../../gameProps/dnd/creatures/Cockatrice";
 import { Bandit } from "../../../../gameProps/dnd/creatures/Bandit";
-import { Button, ButtonGroup } from "@mui/material";
+import { Alert, Button, ButtonGroup } from "@mui/material";
 import { DiceRoll } from "../../../components/diceRoll/DiceRoll";
 
 export function CocoricoVillage () {
@@ -51,9 +51,13 @@ export function CocoricoVillage () {
             Dessus vous pouvez voir "Cimetiere" sur le panneau pointant à l'ouest et montagne sur le panneau pointant à droite.<br/>
         </p>
         <h3>Phase joueur</h3>
-        <i className="playerChoice">si la moindre violence est faite au poule, combat contre 5 cockatrice</i><br/>
+        <Alert variant="standard" severity="warning">
+          Si la moindre violence est faite au poule, combat contre 5 cockatrice
+        </Alert><br/>
+        <Alert variant="standard" severity="success">
+          Si les poules sont rassemblées le barde apprends le chant des cockatrices et peut en invoquer une depuis n'importe où pour un coup de bec DEVASTATEUR... presque (test de charisme)
+        </Alert>
         <CreatureTable creature={Cockatrice}/>
-        <i className="playerChoice">Si les poules sont rassemblées le barde apprends le chant des cockatrices et peut en invoquer une depuis n'importe où pour un coup de bec DEVASTATEUR... presque (test de charisme)</i><br/>
       </div>
     </div>
   );

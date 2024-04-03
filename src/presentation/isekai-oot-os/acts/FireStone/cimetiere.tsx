@@ -31,7 +31,7 @@ export function Cimetiere () {
           Peut être un monument au mort ou autre chose. 
           (si les joueurs veulent la lire, il y a écrit "Depuis que la lune à pleuré l'ame du village repose en paix et nous protège des ténebres depuis l'autre monde")
         </p>
-        <Alert variant="standard" severity="warning" className="PlayerChoice">
+        <Alert variant="standard" severity="warning">
           <p>Si les petites tombes sont creusé rien n'est trouvé à part quelques bijoux et rubis (1d8)</p>
           <p>Si la grande sepulture est creusée, une larme de lune est trouvé et un combat de boss se lance,</p>
           <p>Si les petites tombes ont été creusées aussi, un squelette se leve pour chaque pair de tombes [max 2]</p>

@@ -5,7 +5,7 @@ import { CreatureTable } from "../../components/creatureTable/creatureTable";
 import { Mimique } from "../../../gameProps/dnd/creatures/Mimique";
 import { ItemTooltip } from "../../components/itemTooltip/ItemTooltip";
 import { Lance } from "../../../gameProps/dnd/objects/armes/Lance";
-import { Button } from "@mui/material";
+import { Alert, Button } from "@mui/material";
 import { DiceRoll } from "../../components/diceRoll/DiceRoll";
 
 export function Lac () {
@@ -52,11 +52,15 @@ export function Lac () {
                     </li>
                     <li>et le grand... vous l'entendez faire un bruit, comme un ronflement</li>
                 </ul>
-                <i className="playerChoice">les joueurs peuvent tenter de looter le mimique sans le reveiller [test de discretion et agilité]</i><br/>
-                <i className="playerChoice">si les joueurs decide de fuir [test de discretion ]</i>
+                <Alert variant="standard" severity="warning">
+                    <ol>
+                        <li>les joueurs peuvent tenter de looter le mimique sans le reveiller [test de discretion et agilité]</li>
+                        <li>si les joueurs decide de fuir [test de discretion ]</li>
+                    </ol>
+                </Alert>
                 <CreatureTable creature={Mimique}/>
                 <i>
-                    récupération du<ItemTooltip effects="transforme les dégats  en radiant contre toute créature mort vivant (CA +2)" name="bouclier miroir"/>
+                    récupération du <ItemTooltip effects="transforme les dégats  en radiant contre toute créature mort vivant (CA +2)" name="bouclier miroir"/>
                     + 1d10 rubis
                 </i>
             </div>

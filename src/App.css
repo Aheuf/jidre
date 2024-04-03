@@ -10,15 +10,6 @@ i {
     color: green
 }
 
-.playerChoice {
-    color: rgb(97, 97, 201);
-    font-style: italic;
-}
-
-#act {
-    
-}
-
 #controls {
     overflow-y: scroll;
     position:fixed;
