@@ -1,20 +1,19 @@
-import { useNavigate } from "react-router";
 import { LecteurAudio } from "../../../components/lecteurAudio/LecteurAudio";
 import { OOT_ROUTES } from "../../routes";
 import { ItemTooltip } from "../../../components/itemTooltip/ItemTooltip";
 import { CreatureTable } from "../../../components/creatureTable/creatureTable";
 import { Squelette } from "../../../../gameProps/dnd/creatures/Squelette";
 import { Spectre } from "../../../../gameProps/dnd/creatures/Spectre";
-import { Alert, Button } from "@mui/material";
+import { Alert } from "@mui/material";
 import { DiceRoll } from "../../../components/diceRoll/DiceRoll";
+import { RedirectButton } from "../../../components/RedirectButton";
 
 export function Cimetiere () {
-  const navigate = useNavigate();
   return (
     <div id="act">
       <div id="controls">
         <h3>redirection</h3>
-        <Button onClick={() => navigate(OOT_ROUTES.cocorico)}>retour au village</Button>
+        <RedirectButton link={OOT_ROUTES.cocorico} name="Village Cocorico"/>
         <h3>médias</h3>
         <LecteurAudio loop={true} titre="boss fight" source="src/assets/isekai-oot-os/music/BossBattle.mp3"/>
         <LecteurAudio loop={true} titre="boss clear" source="src/assets/isekai-oot-os/music/BossClear.mp3"/>

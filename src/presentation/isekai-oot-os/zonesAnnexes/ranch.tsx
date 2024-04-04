@@ -1,16 +1,15 @@
-import { Alert, Button } from "@mui/material";
+import { Alert } from "@mui/material";
 import { DiceRoll } from "../../components/diceRoll/DiceRoll";
 import { OOT_ROUTES } from "../routes";
-import { useNavigate } from "react-router";
 import { LecteurAudio } from "../../components/lecteurAudio/LecteurAudio";
+import { RedirectButton } from "../../components/RedirectButton";
 
 export function Ranch () {
-  const navigate = useNavigate();
   return (
     <div id="act">
         <div id="controls">
           <h3>Redirection</h3>
-          <Button onClick={() => navigate(OOT_ROUTES.hub)}>retour au plaines</Button>
+          <RedirectButton link={OOT_ROUTES.hub} name="Plaine d'Hyrule"/>
           <h3>médias</h3>
           <LecteurAudio loop={true} source="src/assets/isekai-oot-os/music/LonLonRanch.mp3" titre="ranch lonlon"/>
           <LecteurAudio loop={true} source="src/assets/isekai-oot-os/music/MiniGame.mp3" titre="mini jeu"/>

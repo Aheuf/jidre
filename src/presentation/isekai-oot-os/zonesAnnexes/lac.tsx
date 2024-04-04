@@ -1,20 +1,19 @@
-import { useNavigate } from "react-router";
 import { OOT_ROUTES } from "../routes";
 import { LecteurAudio } from "../../components/lecteurAudio/LecteurAudio";
 import { CreatureTable } from "../../components/creatureTable/creatureTable";
 import { Mimique } from "../../../gameProps/dnd/creatures/Mimique";
 import { ItemTooltip } from "../../components/itemTooltip/ItemTooltip";
 import { Lance } from "../../../gameProps/dnd/objects/armes/Lance";
-import { Alert, Button } from "@mui/material";
+import { Alert } from "@mui/material";
 import { DiceRoll } from "../../components/diceRoll/DiceRoll";
+import { RedirectButton } from "../../components/RedirectButton";
 
 export function Lac () {
-    const navigate = useNavigate();
     return (
         <div id="act">
             <div id="controls">
                 <h3>redirection</h3>
-                <Button onClick={() => navigate(OOT_ROUTES.hub)}> retour vers les plaines</Button>
+                <RedirectButton link={OOT_ROUTES.hub} name="Plaine d'Hyrule"/>
                 <h3>médias</h3>
                 <LecteurAudio loop={true} source="src/assets/isekai-oot-os/music/HyruleField.mp3" titre="hyrule field"/>
                 <LecteurAudio loop={false} titre="ouverture de coffre" source="src/assets/isekai-oot-os/music/OpenTreasureBox.mp3"/>

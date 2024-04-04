@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router";
 import { OOT_ROUTES } from "../../routes";
 import { LecteurAudio } from "../../../components/lecteurAudio/LecteurAudio";
 import { CreatureTable } from "../../../components/creatureTable/creatureTable";
@@ -6,16 +5,15 @@ import { Sahuagin } from "../../../../gameProps/dnd/creatures/Sahuagin";
 import { ItemTooltip } from "../../../components/itemTooltip/ItemTooltip";
 import { Lance } from "../../../../gameProps/dnd/objects/armes/Lance";
 import { ZoomableImage } from "../../../components/zoomableImage/ZoomableImage";
-import { Button } from "@mui/material";
 import { DiceRoll } from "../../../components/diceRoll/DiceRoll";
+import { RedirectButton } from "../../../components/RedirectButton";
 
 export function ZoraDomain () {
-    const navigate = useNavigate();
     return (
         <div id="act">
             <div id="controls">
                 <h3>redirection</h3>
-                <Button onClick={() => navigate(OOT_ROUTES.hub)}> retour vers les plaines</Button>
+                <RedirectButton link={OOT_ROUTES.hub} name="Plaine d'Hyrule"/>
                 <h3>médias</h3>
                 <LecteurAudio loop={true} titre="domaine zora" source="src/assets/isekai-oot-os/music/ZorasDomain.mp3"/>
                 <LecteurAudio loop={true} titre="boss fight" source="src/assets/isekai-oot-os/music/BossBattle.mp3"/>

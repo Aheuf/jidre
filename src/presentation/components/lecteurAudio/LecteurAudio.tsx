@@ -8,7 +8,7 @@ export function LecteurAudio (props: ILecteurAudioProps) {
   return (
 <figure>
   <figcaption>{props.titre}</figcaption>
-  <audio controls src={props.source} loop={props.loop}/>
+  <audio controls src={props.source} loop={props.loop} style={{background:"none"}}/>
 </figure>
   );
 }

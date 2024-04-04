@@ -1,33 +1,26 @@
-import { useNavigate } from 'react-router';
 import { LecteurAudio } from '../components/lecteurAudio/LecteurAudio';
 import { OOT_ROUTES } from './routes';
 import { CreatureTable } from '../components/creatureTable/creatureTable';
 import { Merrow } from '../../gameProps/dnd/creatures/Merrow';
-import { Alert, Button, ButtonGroup, Modal } from '@mui/material';
+import { Alert, Modal } from '@mui/material';
 import { useState } from 'react';
 import { BadgeDeTest } from '../components/testBadge/BadgeDeTest';
 import { DiceRoll } from '../components/diceRoll/DiceRoll';
 import { RedirectButton } from '../components/RedirectButton';
 
 export function HyruleField () {
-  const navigate = useNavigate();
   const [openMerrowModal, setOpenMerrowModal] = useState(false);
   return (
     <div id="act">
       <div id="controls">
         <h3>redirection</h3>
-        <RedirectButton link={`../${OOT_ROUTES.intro}`} name="village kokiri"/>
-        {/* <RedirectButton link={`../${OOT_ROUTES.intro}`} name="village cocorico"/>
-        <RedirectButton link={`../${OOT_ROUTES.intro}`} name="domaine zora"/> */}
-        <ButtonGroup variant="text" aria-label="Basic button group" orientation="vertical">
-          <Button onClick={() => navigate(`../${OOT_ROUTES.intro}`)}>retour au village kokiri</Button>
-          <Button onClick={() => navigate(OOT_ROUTES.cocorico)}>village cocorico</Button>
-          <Button onClick={() => navigate(OOT_ROUTES.domaineZora)}>domaine aroz</Button>
-          <Button onClick={() => navigate(OOT_ROUTES.ranch)}>ranch nol nol</Button>
-          <Button onClick={() => navigate(OOT_ROUTES.lac)}>lac ailyh</Button>
-          <Button onClick={() => navigate(OOT_ROUTES.desert)}>desert</Button>
-          <Button onClick={() => navigate(OOT_ROUTES.chateau)}>chateau d'Eluryh</Button>
-        </ButtonGroup>
+        <RedirectButton link={`../${OOT_ROUTES.intro}`} name="Village Kokiri"/>
+        <RedirectButton link={OOT_ROUTES.cocorico} name="Village Cocorico"/>
+        <RedirectButton link={OOT_ROUTES.domaineZora} name="Domain zora"/>
+        <RedirectButton link={OOT_ROUTES.ranch} name="Ranch Lonlon"/>
+        <RedirectButton link={OOT_ROUTES.lac} name="Lac Hylia"/>
+        <RedirectButton link={OOT_ROUTES.desert} name="Desert Gerudo"/>
+        <RedirectButton link={OOT_ROUTES.chateau} name="Chateau d'Hyrule"/>
         <h3>médias</h3>
         <LecteurAudio loop={true} source="src/assets/isekai-oot-os/music/Hibou.mp3" titre="chanson du hibou"/>
         <LecteurAudio loop={true} source="src/assets/isekai-oot-os/music/HyruleField.mp3" titre="hyrule field"/>

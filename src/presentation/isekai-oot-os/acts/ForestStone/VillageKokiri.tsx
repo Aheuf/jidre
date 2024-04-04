@@ -1,5 +1,4 @@
 
-import { useNavigate } from 'react-router'
 import { LecteurAudio } from '../../../components/lecteurAudio/LecteurAudio';
 import { ItemTooltip } from '../../../components/itemTooltip/ItemTooltip';
 import { Cimeterre } from '../../../../gameProps/dnd/objects/armes/Cimeterre';
@@ -10,20 +9,20 @@ import { Squelette } from '../../../../gameProps/dnd/creatures/Squelette';
 import { OOT_ROUTES } from '../../routes';
 import { Araignee } from '../../../../gameProps/dnd/creatures/Araignee';
 import { AraigneeGeante } from '../../../../gameProps/dnd/creatures/AraigneeGeante';
-import { Alert, Button, Modal } from '@mui/material';
+import { Alert, Modal } from '@mui/material';
 import { BadgeDeTest } from '../../../components/testBadge/BadgeDeTest';
 import { useState } from 'react';
 import { DiceRoll } from '../../../components/diceRoll/DiceRoll';
+import { RedirectButton } from '../../../components/RedirectButton';
 
 export function VillageKokiri () {
-    const navigate = useNavigate();
     const [openGobelins, setOpenGobelins] = useState(false);
     const [reliqueVolee, setReliqueVolee] = useState(false);
   return (
     <div id="act">
         <div id="controls">
             <h3>redirection</h3>
-            <Button onClick={() => navigate(OOT_ROUTES.hub)}> sortie du village</Button>
+            <RedirectButton link={OOT_ROUTES.hub} name="Plaine d'Hyrule"/>
             <h3>médias</h3>
             <LecteurAudio loop={false} titre="cri de link" source="src/assets/isekai-oot-os/music/LINKSSCREAM.mp3"/>
             <LecteurAudio loop={true} titre="maison de link" source="src/assets/isekai-oot-os/music/InsideaHouse.mp3"/>

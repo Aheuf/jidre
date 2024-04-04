@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router";
 import { OOT_ROUTES } from "../../routes";
 import { CreatureTable } from "../../../components/creatureTable/creatureTable";
 import { ChauveSouris } from "../../../../gameProps/dnd/creatures/ChauveSouris";
@@ -6,15 +5,14 @@ import { ChauveSourisGeante } from "../../../../gameProps/dnd/creatures/ChauveSo
 import { LecteurAudio } from "../../../components/lecteurAudio/LecteurAudio";
 import { Rhinoceros } from "../../../../gameProps/dnd/creatures/Rhinoceros";
 import { DiceRoll } from "../../../components/diceRoll/DiceRoll";
-import { Button } from "@mui/material";
+import { RedirectButton } from "../../../components/RedirectButton";
 
 export function Mountain () {
-    const navigate = useNavigate()
     return (
         <div id="act">
             <div id="controls">
                 <h3>Redirection</h3>
-                <Button onClick={() => navigate(OOT_ROUTES.cocorico)}>retour au village</Button>
+                <RedirectButton link={OOT_ROUTES.cocorico} name="Village Cocorico"/>
                 <h3>médias</h3>
                 <LecteurAudio loop={true} titre="bataille" source="src/assets/isekai-oot-os/music/Battle.mp3"/>
                 <LecteurAudio loop={true} titre="boss fight" source="src/assets/isekai-oot-os/music/GoronCity.mp3"/>

@@ -20,6 +20,15 @@ i {
     background-color: rgba(0, 0, 0, 0.466);
 }
 
+#controls::-webkit-scrollbar {
+    display: none;
+}
+  
+#controls {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 #aventure {
     margin-left: 400px;
     padding: 20px;

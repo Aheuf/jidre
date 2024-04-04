@@ -6,6 +6,7 @@ import { Cockatrice } from "../../../../gameProps/dnd/creatures/Cockatrice";
 import { Bandit } from "../../../../gameProps/dnd/creatures/Bandit";
 import { Alert, Button, ButtonGroup } from "@mui/material";
 import { DiceRoll } from "../../../components/diceRoll/DiceRoll";
+import { RedirectButton } from "../../../components/RedirectButton";
 
 export function CocoricoVillage () {
     const navigate = useNavigate();
@@ -13,11 +14,9 @@ export function CocoricoVillage () {
     <div id="act">
       <div id="controls">
         <h3>redirection</h3>
-        <ButtonGroup variant="text" aria-label="Basic button group" orientation="vertical">
-          <Button onClick={() => navigate(OOT_ROUTES.hub)}>sortie du village</Button>
-          <Button onClick={() => navigate(OOT_ROUTES.cimetiere)}>vers le cimetière</Button>
-          <Button onClick={() => navigate(OOT_ROUTES.montagne)}>vers la montagne</Button>
-        </ButtonGroup>
+        <RedirectButton link={OOT_ROUTES.hub} name="Plaine d'Hyrule"/>
+        <RedirectButton link={OOT_ROUTES.cimetiere} name="Cimetiere Cocorico"/>
+        <RedirectButton link={OOT_ROUTES.montagne} name="Montagne Goron"/>
         <h3>médias</h3>
         <LecteurAudio loop={true} titre="village cocorico" source="src/assets/isekai-oot-os/music/KakarikoVillage.mp3"/>
         <LecteurAudio loop={true} titre="bataille" source="src/assets/isekai-oot-os/music/Battle.mp3"/>
