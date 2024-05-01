@@ -48,7 +48,10 @@ export function ZoraDomain () {
                 <ZoomableImage source="src/assets/dnd/merrow.jpg" title="merrow"/>
                 <p>
                     Je dois aller au chateau prévenir la famille royale que quelque chose se trame...
-                    Tenez, prenez là relique, elle sera plus en sécurité avec vous aventuriers, je pense que mes moindres mouvement vers le chateau seront surveillé.
+                    Tenez, prenez là 
+                    <ItemTooltip name="relique" 
+                        effects="+1 int - Rayon de givre - 18 mètres 1d8 dégâts de froid et sa vitesse est réduite de 3 mètres jusqu'à début de votre prochain tour"/>
+                        , elle sera plus en sécurité avec vous aventuriers, je pense que mes moindres mouvement vers le chateau seront surveillé.
                     Si j'arrive jusque là-bas vivante.
                 </p>
             </div>

@@ -59,7 +59,7 @@ export function Lac () {
                 </Alert>
                 <CreatureTable creature={Mimique}/>
                 <i>
-                    récupération du <ItemTooltip effects="transforme les dégats  en radiant contre toute créature mort vivant (CA +2)" name="bouclier miroir"/>
+                    récupération du <ItemTooltip effects="transforme les dégats en radiant (CA +1)" name="bouclier miroir"/>
                     + 1d10 rubis
                 </i>
             </div>

@@ -6,6 +6,7 @@ import { LecteurAudio } from "../../../components/lecteurAudio/LecteurAudio";
 import { Rhinoceros } from "../../../../gameProps/dnd/creatures/Rhinoceros";
 import { DiceRoll } from "../../../components/diceRoll/DiceRoll";
 import { RedirectButton } from "../../../components/RedirectButton";
+import { ItemTooltip } from "../../../components/itemTooltip/ItemTooltip";
 
 export function Mountain () {
     return (
@@ -62,8 +63,12 @@ export function Mountain () {
                 </i>
                 <CreatureTable creature={Rhinoceros}/>
 
-                <i> remporte la pierre + 1d20 rubis<br/></i>
-            </div>
+                <i> remporte la
+                    <ItemTooltip name="pierre"
+                    effects="+1 for Trait de feu 36 mètres Vous lancez un trait de feu sur une créature ou un objet à portée. Faites une attaque à distance avec un sort contre la cible. En cas de réussite, la cible prend 1d10 dégâts de feu. Un objet inflammable touché par ce sort prend feu s'il n'est pas porté."/>
+                    + 1d20 rubis
+                </i>
+            </div><br/>
             
         </div>
     );

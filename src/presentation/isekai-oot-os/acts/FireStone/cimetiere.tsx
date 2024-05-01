@@ -52,7 +52,7 @@ export function Cimetiere () {
         <p>
           Le ciel reprends des couleurs normales, les créatures semble prendre feu, d'un feu bleu pâle, quelques feu folet se rue vers la pierre de lune et semble
           y penetrer.
-          Dans les cendres des guenilles du spectre vous arrivez à distinguer <ItemTooltip name="gantelet" effects="+2 aux jets de force, permet de soulever des rochers"/>
+          Dans les cendres des guenilles du spectre vous arrivez à distinguer <ItemTooltip name="gantelet" effects="resistance aux dégats necrotiques"/>
         </p>
       </div>
     </div>

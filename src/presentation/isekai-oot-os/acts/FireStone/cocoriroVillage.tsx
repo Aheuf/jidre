@@ -1,15 +1,13 @@
-import { useNavigate } from "react-router";
 import { LecteurAudio } from "../../../components/lecteurAudio/LecteurAudio";
 import { OOT_ROUTES } from "../../routes";
 import { CreatureTable } from "../../../components/creatureTable/creatureTable";
 import { Cockatrice } from "../../../../gameProps/dnd/creatures/Cockatrice";
 import { Bandit } from "../../../../gameProps/dnd/creatures/Bandit";
-import { Alert, Button, ButtonGroup } from "@mui/material";
+import { Alert } from "@mui/material";
 import { DiceRoll } from "../../../components/diceRoll/DiceRoll";
 import { RedirectButton } from "../../../components/RedirectButton";
 
 export function CocoricoVillage () {
-    const navigate = useNavigate();
   return (
     <div id="act">
       <div id="controls">

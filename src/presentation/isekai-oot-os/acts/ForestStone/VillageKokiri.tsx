@@ -55,11 +55,11 @@ export function VillageKokiri () {
                     un coffre contenant :
                 </li>
             <ol>
-                <li><ItemTooltip item={Cimeterre} effects="juste une épée en bois" /></li>
-                <li><ItemTooltip item={ArcCourt} effects="un lance pierre qui charge les projectiles de lumières" /></li>
-                <li><ItemTooltip name={"flute"} effects="peut charmer une bête" /></li>
-                <li><ItemTooltip name={"pavois"} effects="égage enormement de chaleur devant" /></li>
-                <li><ItemTooltip name={"cape verte"} effects="donne la taille d'un enfant (90cm)" /></li>
+                <li><ItemTooltip item={Cimeterre} effects=""/></li>
+                <li><ItemTooltip item={ArcCourt} name="lance-pierre" effects=""/></li>
+                <li><ItemTooltip name={"ocarina"} effects="Illusion mineure - 9m - Le lanceur de sorts crée un son ou l'image d'un objet à portée pendant une minute. Si une créature utilise une action pour examiner le son ou l'image, elle peut comprendre qu'il s'agit d'une illusion grâce à un jet d'Intelligence (Investigation) contre le DD de sauvegarde de votre sort. Si une créature discerne l'illusion pour ce qu'elle est, l'illusion s'évanouit pour la créature."/></li>
+                <li><ItemTooltip name={"bouclier"} effects="dégage enormement de chaleur vers l'avant"/></li>
+                <li><ItemTooltip name={"cape verte"} effects="donne la taille d'un enfant (90cm)"/></li>
             </ol>
             </ol>
             <h2>Première rencontre</h2>
@@ -121,7 +121,11 @@ export function VillageKokiri () {
                 ça risque de grandement de foutre la merde au village
             </p>
             <Alert variant="standard" severity="info" onClick={() => {setReliqueVolee(true)}}>
-                si la relique est volée
+                si la 
+                <ItemTooltip 
+                    name='relique' 
+                    effects='  +1 dext - Assistance - cac - Vous touchez une créature consentante. la cible peut lancer un d4 et ajouter le résultat du dé à un jet de caractéristique de son choix. Elle peut lancer le dé avant ou après avoir effectué son jet de caractéristique. Le sort prend alors fin.'/>
+                est volée
                 <p>
                     vous rentrez dans le temple, [jet de perception pour voir l'araignée avant qu'elle tombe du plafond]
                     une araignée géante tombe du plafond ainsi que deux oeufs car elle était en train de les fixer au plafond avec une multitude d'autre.
@@ -138,7 +142,7 @@ export function VillageKokiri () {
                 </p>
                 <p> 
                     Vous arrivez au village mais les enfants sont tous mort.
-                    vous avancez mais les enfants se relèvent
+                    vous avancez et les enfants se relèvent
                 </p>
                 <CreatureTable creature={Squelette}/>
             </div>
